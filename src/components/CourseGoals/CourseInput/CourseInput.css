@@ -29,9 +29,9 @@
 .form-control.invalid label {
   color: red;
 }
-.invalid-button {
-  background-color: red;
+.invalid {
+  background-color: #8b005d;
 }
-.valid-button {
+.valid {
   background-color: rgb(242, 176, 176);
 }

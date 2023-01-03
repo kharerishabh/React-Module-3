@@ -5,7 +5,7 @@ import "./CourseInput.css";
 
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
-  const [isValid, setIsValid] = useState(true);
+  const [isValid, setIsValid] = useState(false);
 
   const goalInputChangeHandler = (event) => {
     if(event.target.value.trim().length > 0){
@@ -29,7 +29,9 @@ const CourseInput = (props) => {
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler}/>
         </div>
-      <Button type="submit">Add Goal</Button>
+        
+      <Button class={isValid ? 'invalid':'valid'}type="submit">Add Goal</Button>
+      
     </form>
   );
 };
